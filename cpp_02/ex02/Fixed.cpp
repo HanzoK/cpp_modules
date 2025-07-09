@@ -6,7 +6,7 @@
 /*   By: hanjkim <hanjkim@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 21:43:18 by hanjkim           #+#    #+#             */
-/*   Updated: 2025/07/09 17:19:30 by hanjkim          ###   ########.fr       */
+/*   Updated: 2025/07/09 19:47:24 by hanjkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,13 +89,7 @@ Fixed Fixed::operator*(const Fixed& calc) {
 Fixed Fixed::operator/(const Fixed& calc) {
     Fixed tmp;
     long div = (long)_rawBits << _fractBits;
-	std::cout << "div: " << div << std::endl;
-	if (!calc._rawBits) {
-		std::cout << "yo wtf?" << std::endl;
-		exit(69);
-	}
     tmp._rawBits = (int)(div / calc._rawBits);
-	std::cout << "wtf?" << std::endl;
     return tmp;
 }
 
